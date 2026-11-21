@@ -1,0 +1,15 @@
+=== Sales IQR Outlier Analysis ===
+Q1 (25%): ₹1,812.75 | Q3 (75%): ₹14,087.69 | IQR: ₹12,274.94
+Lower Fence: ₹-16,599.66 | Upper Fence: ₹32,500.10
+Outliers Count: 631 (9.01%)
+
+=== Profit IQR Outlier Analysis ===
+Q1 (25%): ₹573.14 | Q3 (75%): ₹4,531.54 | IQR: ₹3,958.39
+Lower Fence: ₹-5,364.44 | Upper Fence: ₹10,469.13
+Outliers Count: 640 (9.14%)
+
+=== Income IQR Outlier Analysis ===
+Q1 (25%): ₹37,308.81 | Q3 (75%): ₹64,787.64 | IQR: ₹27,478.83
+Lower Fence: ₹-3,909.44 | Upper Fence: ₹106,005.89
+Outliers Count: 278 (3.97%)
+

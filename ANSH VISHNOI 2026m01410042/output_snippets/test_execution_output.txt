@@ -1,0 +1,24 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.14.7, pytest-9.2.0, pluggy-1.7.0 -- /Users/anshvishnoi/Desktop/ANSH VISHNOI 2026m01410042/.venv/bin/python3.14
+cachedir: .pytest_cache
+rootdir: /Users/anshvishnoi/Desktop/ANSH VISHNOI 2026m01410042
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.16.0
+collecting ... collected 13 items
+
+tests/test_data_auditor.py::test_audit_missing_values PASSED             [  7%]
+tests/test_data_auditor.py::test_audit_duplicates PASSED                 [ 15%]
+tests/test_data_auditor.py::test_audit_categorical_inconsistencies PASSED [ 23%]
+tests/test_data_auditor.py::test_audit_numerical_ranges PASSED           [ 30%]
+tests/test_data_auditor.py::test_audit_dates PASSED                      [ 38%]
+tests/test_data_cleaner.py::test_data_cleaner_pipeline PASSED            [ 46%]
+tests/test_data_loader.py::test_load_raw_data_success PASSED             [ 53%]
+tests/test_data_loader.py::test_load_cleaned_data_success PASSED         [ 61%]
+tests/test_data_loader.py::test_get_dataset_overview PASSED              [ 69%]
+tests/test_feature_engineering.py::test_add_engineered_features PASSED   [ 76%]
+tests/test_integration_pipeline.py::test_full_pipeline_integration PASSED [ 84%]
+tests/test_outlier_detector.py::test_detect_iqr_outliers PASSED          [ 92%]
+tests/test_outlier_detector.py::test_detect_zscore_outliers PASSED       [100%]
+
+============================== 13 passed in 0.19s ==============================

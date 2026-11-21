@@ -1,0 +1,40 @@
+=== 1. MISSING VALUES AUDIT ===
+                    Missing_Count  Missing_Pct
+Delivery_Date                 106         1.50
+Age                           142         2.00
+Income                        253         3.57
+Discount                       71         1.00
+Customer_Rating               428         6.04
+Satisfaction_Level            179         2.53
+
+=== 2. DUPLICATE ROWS AUDIT ===
+Total Duplicate Rows Found: 61 (0.86%)
+
+=== 3. CATEGORICAL INCONSISTENCIES (GENDER & REGION) ===
+Gender Unique Values:
+Gender
+Female    3585
+Male      3232
+FEMALE      53
+female      53
+male        46
+MALE        44
+M           38
+F           33
+Name: count, dtype: int64
+
+Region Unique Values:
+Region
+West     1783
+East     1754
+South    1741
+North    1647
+east       30
+south      24
+north      21
+Sth        20
+WEST       19
+Nort       17
+west       15
+NORTH      13
+Name: count, dtype: int64

@@ -1,0 +1,36 @@
+=== Q1: Regional Performance & AOV ===
+        Total_Sales  Order_Count  Average_Order_Value
+Region                                               
+East    20007040.45         1765             11335.43
+North   18061043.02         1677             10769.85
+South   18893965.25         1762             10723.02
+West    19762028.80         1798             10991.12
+
+=== Q2: Category Profit Margins ===
+                  Total_Sales  Total_Profit  Margin_Pct
+Product_Category                                       
+Electronics       37638537.96   12343555.67       32.79
+Furniture         26041504.85    8531215.74       32.76
+Grocery            2685953.47     874918.56       32.57
+Clothing           7794052.75    2525280.25       32.40
+Office Supplies    2564028.49     830036.34       32.37
+
+=== Q3: Customer Segment Lifetime Revenue ===
+                  Customers  Total_Sales       AOV  Revenue_per_Customer
+Customer_Segment                                                        
+Consumer               1437  41718041.97  10861.24              29031.34
+Corporate              1186  23558166.91  11138.61              19863.55
+Home Office             796  11447868.64  10944.43              14381.74
+
+=== Q4: Return Rates by Segment and Mode ===
+                                Total_Orders  Returns  Return_Rate_%
+Customer_Segment Delivery_Mode                                      
+Consumer         Express                1125      137          12.18
+                 Same-Day                377       47          12.47
+                 Standard               2339      298          12.74
+Corporate        Express                 617       87          14.10
+                 Same-Day                209       30          14.35
+                 Standard               1289      162          12.57
+Home Office      Express                 313       31           9.90
+                 Same-Day                111       12          10.81
+                 Standard                622       76          12.22
