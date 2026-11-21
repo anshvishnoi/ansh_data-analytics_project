@@ -1,6 +1,6 @@
 # 🛍️ Retail Customer Sales — Exploratory Data Analysis & Decision Dashboard System
 
-> **This project focuses on exploratory data analysis of a retail customer sales dataset. The main objective is to identify data quality issues, clean the dataset, perform statistical analysis, detect outliers, create useful features, and generate business insights through visualizations and an interactive dashboard. />
+> **This project focuses on exploratory data analysis of a retail customer sales dataset. The main objective is to identify data quality issues, clean the dataset, perform statistical analysis, detect outliers, create useful features, and generate business insights through visualizations and an interactive dashboard. 
 .**  
 > **Author:** Ansh Vishnoi (`2026m01410042`)  
 > **GitHub Repository:** [https://github.com/anshvishnoi/ansh_vishnoi_2026m01410042/tree/main](https://github.com/anshvishnoi/ansh_data-analytics_project/tree/main/ANSH%20VISHNOI%202026m01410042)  
