@@ -1,7 +1,7 @@
 # 🚀 Comprehensive Project Summary: Retail Customer Sales Analytics System
  
 > **Candidate Name:** Ansh Vishnoi (`2026m01410042`)  
-> **GitHub Repository:** [https://github.com/anshvishnoi/ansh_vishnoi_2026m01410042/tree/main](https://github.com/anshvishnoi/ansh_vishnoi_2026m01410042/tree/main)  
+> **GitHub Repository:** (https://github.com/anshvishnoi/ansh_data-analytics_project/tree/main/ANSH%20VISHNOI%202026m01410042)  
 > **Course Project:** Project 1 — Exploratory Data Analysis & Analytics Engineering  
 > **Dataset:** Indian Retail Customer Sales Dataset (7,084 Raw Transaction Records)
 
