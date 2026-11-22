@@ -2,7 +2,7 @@
 
 > **Production-Grade Mini Project for Exploratory Data Analysis, Quality Auditing, Feature Engineering, Outlier Isolation, and Interactive Business Intelligence.**  
 > **Author:** Ansh Vishnoi (`2026m01410042`)  
-> **GitHub Repository:** [https://github.com/anshvishnoi/ansh_vishnoi_2026m01410042/tree/main](https://github.com/anshvishnoi/ansh_vishnoi_2026m01410042/tree/main)  
+> **GitHub Repository:** https://github.com/anshvishnoi/ansh_data-analytics_project/tree/main/ANSH%20VISHNOI%202026m01410042  
 > **Source Problem Statement:** `Project1_Exploratory_Data_Analysis.docx`  
 > **Dataset:** Simulated Retail Customer Sales Dataset (7,084 raw transaction records across 24 columns, 2023–2024)
 
