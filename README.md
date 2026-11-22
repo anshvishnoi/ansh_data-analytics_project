@@ -21,54 +21,42 @@
 
 ## 🗂️ Complete Project Architecture & Directory Structure
 
-Har component ke liye ek dedicated folder banaya gaya hai. **Har folder ke andar ek detailed `README.md` hai** jo batata hai ki wo folder kya represent karta hai aur uske andar kya hai:
+# Project File Guide
+
+This guide maps the folders and files in the current workspace. `.venv/`, `.pytest_cache/`, `__pycache__/`, and `.DS_Store` are local environment or cache files and are not considered part of the project source.
+
+## Directory Structure
 
 ```text
 ANSH VISHNOI 2026m01410042/
-├── README.md                          # 🌟 Master Project Documentation & Directory Guide
-├── requirements.txt                   # All project dependencies (pandas, streamlit, plotly, pytest)
-├── pytest.ini                         # Automated test suite configuration
-├── run_app.sh                         # 🚀 1-Click script to launch the Streamlit Web Dashboard
-├── retail_customer_sales_dataset.csv  # Original source dataset
-├── Project1_Exploratory_Data_Analysis.docx # Original problem statement specification
-│
-├── data/                              # 📊 Dataset Storage Folder
-│   ├── README.md                      # Guide to raw vs processed data schemas
+├── README.md
+├── PROJECT_FILE_GUIDE.md
+├── EDA_Complete_Walkthrough.ipynb
+├── Cleaned_Data.csv
+├── Raw_Data.csv
+├── retail_customer_sales_dataset.csv
+├── descriptive_statistics.csv
+├── Project1_Exploratory_Data_Analysis.docx
+├── Project_Documentation_Ansh_Vishnoi_2026m01410042.pdf
+├── pytest.ini
+├── run_app.sh
+├── app/
+│   ├── README.md
+│   └── main.py
+├── code_snippets/
+│   ├── README.md
+│   ├── 01_data_audit_snippet.py
+│   ├── 02_data_cleaning_snippet.py
+│   ├── 03_feature_engineering_snippet.py
+│   ├── 04_outlier_detection_snippet.py
+│   └── 05_groupby_business_queries.py
+├── data/
+│   ├── README.md
 │   ├── raw/
-│   │   └── retail_customer_sales_dataset.csv     # Raw dataset (7,084 rows, 24 cols)
-│   └── processed/
-│       └── cleaned_retail_sales_dataset.csv      # Production-grade sanitized dataset (7,002 rows, 35 cols)
-│
-├── docs/                              # 📄 Formal Documentation & Specification Folder
-│   ├── README.md                      # Documentation index and reading guide
-│   ├── SRS_Document.md                # IEEE-standard Software Requirements Specification (FR-1 to FR-8)
-│   ├── Project_Summary.md             # High-level project summary and objective mapping
-│   ├── Business_Insights_Report.md    # 2–4 page formal business insights report for management
-│   └── Data_Dictionary.md             # Complete metadata for all 24 raw fields + 10 engineered features
-│
-├── src/                               # ⚙️ Modular Python Source Code (Clean Architecture)
-│   ├── README.md                      # Architecture guide & module usage instructions
-│   ├── __init__.py
-│   ├── data_loader.py                 # File reading, type parsing & validation
-│   ├── data_auditor.py                # Quality auditor (missingness, duplicates, anomalies, date conflicts)
-│   ├── data_cleaner.py                # Cleaning logic (standardization, segment imputation, SLA date fix)
-│   ├── feature_engineering.py         # Delivery_Days, Profit_Margin, Revenue_per_Customer, temporal metrics
-│   ├── outlier_detector.py            # IQR & Z-score extreme value detection & commercial classification
-│   ├── eda_analyzer.py                # Descriptive stats, skewness interpretations, 5 business groupby queries
-│   ├── visualizer.py                  # Dual visual engine (12 PNG high-res charts + interactive Plotly figures)
-│   └── generate_eda_reports.py        # Automated runner generating all markdown summaries
-│
-├── app/                               # 🌐 Interactive Streamlit Web Application
-│   ├── README.md                      # Step-by-step guide to navigating the Streamlit UI
-│   └── main.py                        # Multi-tab interactive analytics & audit web dashboard
-│
-├── eda_summary/                       # 📈 EDA Findings, Tables & Figures
-│   ├── README.md                      # Directory overview and chart catalog
-│   ├── data_quality_audit_report.md   # Exact missing counts, duplicate counts, and formatting issues
-│   ├── cleaning_justifications.md     # Business & mathematical justification for every cleaning step
-│   ├── descriptive_statistics.csv     # Complete parametric/non-parametric statistics table (8 variables)
-│   ├── business_questions_answers.md  # 5+ Core business questions answered via GroupBy aggregations
-│   └── figures/                       # 🎨 12 High-Resolution (300 DPI) Publication Charts
+│   │   └── retail_customer_sales_dataset.csv
+│   ├── processed/
+│   │   └── cleaned_retail_sales_dataset.csv
+│   └── images/figures/
 │       ├── 01_missing_values_audit.png
 │       ├── 02_sales_distribution_skew.png
 │       ├── 03_income_distribution.png
@@ -79,38 +67,148 @@ ANSH VISHNOI 2026m01410042/
 │       ├── 08_aov_by_region.png
 │       ├── 09_profit_margin_by_category.png
 │       ├── 10_return_rate_analysis.png
-│       ├── 11_correlation_heatmap.png
 │       └── 12_monthly_sales_trend.png
-│
-├── code_snippets/                     # 💻 Standalone & Documented Code Snippets
-│   ├── README.md                      # Catalog of individual standalone scripts
-│   ├── 01_data_audit_snippet.py       # Standalone data quality audit script
-│   ├── 02_data_cleaning_snippet.py    # Standalone normalization and imputation script
-│   ├── 03_feature_engineering_snippet.py # Standalone calculated columns script
-│   ├── 04_outlier_detection_snippet.py   # Standalone IQR & Z-score script
-│   └── 05_groupby_business_queries.py   # Standalone business query aggregation script
-│
-├── output_snippets/                   # 🖼️ Verified Execution Logs & Output Previews
-│   ├── README.md                      # Output directory index
-│   ├── audit_summary_output.txt       # Captured terminal audit results
-│   ├── cleaning_log_output.txt        # Captured cleaning execution log
-│   ├── outlier_detection_output.txt   # Captured IQR and Z-score calculations
-│   ├── groupby_results_output.txt     # Captured business groupby answers
-│   └── test_execution_output.txt      # 100% pytest automated test suite run log
-│
-└── tests/                             # 🧪 Automated Test Suite (Pytest)
-    ├── README.md                      # Testing guide & assertions breakdown
-    ├── conftest.py                    # Pytest fixtures and mock anomaly data
-    ├── test_data_loader.py            # Unit tests for data loading
-    ├── test_data_auditor.py           # Unit tests for anomaly detection
-    ├── test_data_cleaner.py           # Unit tests for data cleaning & idempotency
-    ├── test_feature_engineering.py    # Unit tests for calculated fields
-    ├── test_outlier_detector.py       # Unit tests for IQR boundary calculations
-    └── test_integration_pipeline.py  # End-to-end integration test (Raw -> Audit -> Clean -> Analytics)
+├── docs/
+│   ├── README.md
+│   ├── Business_Insights_Report.md
+│   ├── Data_Dictionary.md
+│   ├── Project_Summary.md
+│   ├── Project_Summary_Report.pdf
+│   └── SRS_Document.md
+├── output_snippets/
+│   ├── README.md
+│   ├── audit_summary_output.txt
+│   ├── cleaning_log_output.txt
+│   ├── groupby_results_output.txt
+│   ├── outlier_detection_output.txt
+│   └── test_execution_output.txt
+├── processed/
+│   └── retail_clean.csv
+├── src/
+│   ├── README.md
+│   ├── __init__.py
+│   ├── data_auditor.py
+│   ├── data_cleaner.py
+│   ├── data_loader.py
+│   ├── eda_analyzer.py
+│   ├── feature_engineering.py
+│   ├── generate_all_pdfs.py
+│   ├── generate_eda_reports.py
+│   ├── outlier_detector.py
+│   └── visualizer.py
+└── tests/
+    ├── README.md
+    ├── conftest.py
+    ├── test_data_auditor.py
+    ├── test_data_cleaner.py
+    ├── test_data_loader.py
+    ├── test_feature_engineering.py
+    ├── test_integration_pipeline.py
+    └── test_outlier_detector.py
 ```
 
----
+## Root Files
 
+| File | Contents / purpose |
+|---|---|
+| `README.md` | Project overview, quick-start commands, findings, and documentation links. |
+| `PROJECT_FILE_GUIDE.md` | This guide: directory tree, file descriptions, and distinctions between data files. |
+| `EDA_Complete_Walkthrough.ipynb` | Step-by-step exploratory data analysis in notebook format. |
+| `Raw_Data.csv` | Root-level copy/export of the raw transaction data. |
+| `retail_customer_sales_dataset.csv` | Root-level copy of the source dataset; the loader also checks this path as a fallback. |
+| `Cleaned_Data.csv` | Root-level export of the cleaned dataset, including engineered columns. |
+| `descriptive_statistics.csv` | Descriptive statistics for variables, such as mean, median, quartiles, and skewness. |
+| `Project1_Exploratory_Data_Analysis.docx` | Original project/problem statement. |
+| `Project_Documentation_Ansh_Vishnoi_2026m01410042.pdf` | PDF project documentation deliverable. |
+| `pytest.ini` | Pytest configuration for test discovery and the project import path. |
+| `run_app.sh` | Dashboard launch script; generates cleaned data/reports when needed. |
+
+## Folder and File Descriptions
+
+### `app/` - Streamlit Dashboard
+
+- `main.py`: Entry point for the interactive dashboard; displays analytics, charts, audits, and downloads.
+- `README.md`: Dashboard tabs and launch instructions.
+
+### `src/` - Core Python Modules
+
+- `data_loader.py`: Loads raw and cleaned CSV files. Default paths are `data/raw/` and `data/processed/`.
+- `data_auditor.py`: Audits missing values, duplicates, category inconsistencies, and invalid values.
+- `data_cleaner.py`: Standardizes and cleans raw data, then creates the cleaned dataset and cleaning log.
+- `feature_engineering.py`: Creates delivery days, profit margin, and other derived columns.
+- `outlier_detector.py`: Identifies outliers using IQR and Z-scores.
+- `eda_analyzer.py`: Computes descriptive statistics and business group-by analyses.
+- `visualizer.py`: Creates static figures and interactive dashboard charts.
+- `generate_eda_reports.py`: Generates reports on audit, cleaning, and business findings.
+- `generate_all_pdfs.py`: Script for generating project PDF reports.
+- `__init__.py`: Makes `src` a Python package.
+- `README.md`: Overview and usage notes for the source modules.
+
+### `data/` - Data and Figures
+### `data/` - Data and Figures
+
+- `raw/retail_customer_sales_dataset.csv`: Canonical raw input for the pipeline; `data_loader.py` loads this file first.
+- `processed/cleaned_retail_sales_dataset.csv`: Canonical cleaned output for the pipeline and the loader's default cleaned-data path.
+- `images/figures/`: The 11 EDA PNG charts currently present. The chart numbered `11_...` is not present in this workspace.
+- `README.md`: Overview of the raw and processed datasets.
+
+### `processed/`
+
+- `retail_clean.csv`: Another export/copy of the cleaned retail data. The core loader's default cleaned-data path is `data/processed/cleaned_retail_sales_dataset.csv`.
+
+### `docs/` - Reports and Specifications
+### `docs/` - Reports and Specifications
+
+- `SRS_Document.md`: Software requirements and system behavior.
+- `Project_Summary.md`: Project overview, objectives, and implementation summary.
+- `Business_Insights_Report.md`: Business findings and recommendations from the analysis.
+- `Data_Dictionary.md`: Definitions of dataset columns, types, meanings, and derived fields.
+- `Project_Summary_Report.pdf`: PDF version of the project summary.
+- `README.md`: Documentation index.
+
+### `code_snippets/` - Short Standalone Examples
+### `code_snippets/` - Short Standalone Examples
+
+- `01_data_audit_snippet.py`: Example of data quality checks.
+- `02_data_cleaning_snippet.py`: Example of data cleaning.
+- `03_feature_engineering_snippet.py`: Example of creating derived columns.
+- `04_outlier_detection_snippet.py`: Example of outlier analysis.
+- `05_groupby_business_queries.py`: Group-by queries for business questions.
+- `README.md`: Snippet usage and run commands.
+
+### `output_snippets/` - Saved Outputs
+### `output_snippets/` - Saved Outputs
+
+- `audit_summary_output.txt`: Snapshot of the audit results.
+- `cleaning_log_output.txt`: Saved log of the cleaning steps.
+- `outlier_detection_output.txt`: Output of the outlier calculations.
+- `groupby_results_output.txt`: Business aggregation results.
+- `test_execution_output.txt`: Saved output from a test run.
+- `README.md`: Index of the output files.
+
+### `tests/` - Automated Tests
+
+- `conftest.py`: Shared pytest fixtures.
+- `test_data_loader.py`: Dataset loading tests.
+- `test_data_auditor.py`: Audit logic tests.
+- `test_data_cleaner.py`: Data cleaning behavior tests.
+- `test_feature_engineering.py`: Derived feature tests.
+- `test_outlier_detector.py`: Outlier calculation tests.
+- `test_integration_pipeline.py`: End-to-end pipeline test.
+- `README.md`: Test suite overview and run instructions.
+
+## Generated Outputs
+## Generated Outputs
+## Generated Outputs
+
+Running `src/generate_eda_reports.py` creates an `eda_summary/` folder in the project root. This folder contains generated reports such as the audit report, cleaning justifications, and business-question answers. It was not present in the current workspace listing, so it is not included in the tree of existing files above.
+
+## Where to Start
+
+1. Read `README.md` and this file guide to understand the project.
+2. Open `EDA_Complete_Walkthrough.ipynb` to follow the EDA workflow.
+3. Run `./run_app.sh` from the project root to launch the dashboard.
+4. Run `.venv/bin/pytest tests -v` to execute the tests.
 ## 🎯 Problem Statement Compliance Matrix (100% Rubric Coverage)
 
 | Evaluation Rubric | Weight | Implementation Details | Verified Location |
